@@ -1,15 +1,18 @@
 #language: pt
 
 Funcionalidade: Cadastro de Anúncios
-    Sendo usuário cadastrado no Rocklov que posui equipamento musicais
+    Sendo usuário cadastrado no Rocklov que possui equipamentos musicais
     Quero cadastrar meus equiamentos
     Para que eu possa disponibilizalos para locação
 
     Cenario: Novo equipo
 
-        Dado que eu tenho o seguinte equipamento
+        Dado que estou logado como "alice@gmail.com" e "123456"
+            E que acesso o formulario de cadastro de Anúncios
+            E que eu tenho o seguinte equipamento
+            | thumb     | fender-sb.jpg |
             | nome      | Fender Strato |
-            | categoria | cordas        |
+            | categoria | Cordas        |
             | preco     | 200           |
-        Quando submento o cadastro desse item
+        Quando submeto o cadastro desse item
         Então devo ver esse item no meu Dashboard
